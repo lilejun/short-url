@@ -16,7 +16,7 @@ public class UrlHelper {
 
     //Caffeine是guava的升级版本, 因使用了 Window TinyLfu 回收策略，提供了一个近乎最佳的命中率
     public static final Cache<String, String> cache = Caffeine.newBuilder()
-            .maximumSize(5000000)//500W个缓存
+            .maximumSize(1000000)//100W个缓存
             .expireAfterWrite(7, TimeUnit.DAYS)//7天过期
             .build();
 
